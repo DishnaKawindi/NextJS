@@ -1,0 +1,24 @@
+Next JS
+
+Implements react components to client and server components. Default option is server components. Need to define client components specifically.
+
+To create a NextJS project
+--> npx create-next-app@latest
+Give a project name
+TypeScript Yes
+ESLint Yes
+Tailwind CSS Yes
+'src/directory' No
+App Router Yes
+Turbopack Yes
+import alias No
+
+To run the project
+--> npm run dev
+
+NextJS provides static routing. A file based routing system.
+Create a folder named 'about' then create new page.tsx file within it.
+Now go to the browser and type http://localhost:3000/about. This will automatically go to the about page.
+
+But dynamic routing is still needed. Ex: for viewing user profiles. /users/user-1, users/user-2 etc.
+
