@@ -22,3 +22,20 @@ Now go to the browser and type http://localhost:3000/about. This will automatica
 
 But dynamic routing is still needed. Ex: for viewing user profiles. /users/user-1, users/user-2 etc.
 
+** layout.tsx acts as the parent of all the routes. So can add common components here such as nav bars, headers and footers.
+
+Adding directories within parenthesis (directory) allows to have different layouts for different directories. It is called route groups. Move the home page to (root) directory. And add a new layout.tsx file in it too.
+
+error.tsx files - Copy the code from Next.js documentation. Can add error.tsx files separately into directories or add a global-error.tsx file in the app root folder. If there are multiple error files, it will prioritize the one in the same directory.
+
+
+loading.tsx - for people with slower connection, can add a loading file (with a spinner etc.) to show while loading. Add the file to the app root folder.
+
+Next.js provides server side rendering which is beneficial for better SEO.
+
+Time based revalidation is recommended for server side rendering. The entire page will be refreshed. See documentation.
+export const revalidate = 3600 // seconds
+Second option is to revalidate the request after some time. It will work only on the specified data segments.
+Third option is on-demand validation.
+** Put revalidate time = 0 for real time sites.
+Partial Prerendering is good for when there is both static and dynamic components. (still on experimental level)
